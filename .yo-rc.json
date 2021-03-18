@@ -1,0 +1,53 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.growts.grivi",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.10.3",
+    "applicationType": "monolith",
+    "baseName": "grivi",
+    "packageName": "com.growts.grivi",
+    "packageFolder": "com/growts/grivi",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "OTcwMTM2ODdkNzQyM2MzMDI1ZDVmMWEwYzEzNDkzMDNhZmI5MGNkMzIxODE3ZWQxNjg1MzZiZjdlM2ViYjc3MjRkMDQ3ZTFjOGE0YTg5MzZiMTZkZjI3OTE2YTc5ZGE4M2M3YTI0YTA0MmQ5M2U4ZjRmNTBlZTNiNzJkMGI1YjA=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "vue",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "creationTimestamp": 1616107659481,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-vuejs",
+        "version": "1.9.2"
+      }
+    ],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": ["en", "pt-br", "es"],
+    "blueprints": [
+      {
+        "name": "generator-jhipster-vuejs",
+        "version": "1.9.2"
+      }
+    ]
+  }
+}
