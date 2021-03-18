@@ -1,4 +1,3 @@
-
 entity Region {
 	regionName String
 }
@@ -72,7 +71,7 @@ entity Notification {
 	channel Long required,
     post Long,
     review Long,
-    reaction Long 
+    reaction Long
 }
 
 entity Profesion {
@@ -108,10 +107,10 @@ entity Reaction {
 
 entity Review {
 	avgRate Double,
-    date Instant    
+    date Instant
 }
 
-entity ReviewDetail {
+entity ReviewDet {
 	rate Long
 }
 
@@ -140,8 +139,8 @@ relationship OneToMany {
     Post to Comment{post(postIdFrom)}
     Post to Comment{post(postId)}
     Review to Notification{review(review)}
-    Review to ReviewDetail{review(review)}
-    Notification to ReviewDetail{question(question)}
+    Review to ReviewDet{review(review)}
+    Notification to ReviewDet{question(question)}
     Reaction to Notification{reaction(reaction)}
     Channel to ChannelSubscription{channel(channel)}
     Channel to Notification{channel(channel)}
