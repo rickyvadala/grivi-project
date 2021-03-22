@@ -128,7 +128,7 @@ public class QuestionResourceIT {
             .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME)))
             .andExpect(jsonPath("$.[*].text").value(hasItem(DEFAULT_TEXT)));
     }
-    
+
     @Test
     @Transactional
     public void getQuestion() throws Exception {
@@ -162,7 +162,7 @@ public class QuestionResourceIT {
         // Update the question
         Question updatedQuestion = questionRepository.findById(question.getId()).get();
         // Disconnect from session so that the updates on updatedQuestion are not directly saved in db
-        em.detach(updatedQuestion);
+        // em.detach(updatedQuestion);
         updatedQuestion
             .name(UPDATED_NAME)
             .text(UPDATED_TEXT);
