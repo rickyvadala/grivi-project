@@ -1,0 +1,51 @@
+{
+  "name": "Profession",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "providerProfession",
+      "otherEntityRelationshipName": "profession",
+      "relationshipName": "providerProfession"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "channel",
+      "otherEntityRelationshipName": "profession",
+      "relationshipName": "channel"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "reviewQuestion",
+      "otherEntityRelationshipName": "profession",
+      "relationshipName": "reviewQuestion"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "category",
+      "otherEntityRelationshipName": "profession",
+      "relationshipName": "category",
+      "otherEntityField": "category"
+    }
+  ],
+  "changelogDate": "20210322020350",
+  "entityTableName": "profession",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

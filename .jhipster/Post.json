@@ -1,0 +1,50 @@
+{
+  "name": "Post",
+  "fields": [
+    {
+      "fieldName": "text",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "photoUrl",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "notification",
+      "otherEntityRelationshipName": "post",
+      "relationshipName": "notification"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "reaction",
+      "otherEntityRelationshipName": "post",
+      "relationshipName": "reaction"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "comment",
+      "otherEntityRelationshipName": "postFrom",
+      "relationshipName": "commentsFrom"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "comment",
+      "otherEntityRelationshipName": "post",
+      "relationshipName": "comments"
+    }
+  ],
+  "changelogDate": "20210321223107",
+  "entityTableName": "post",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

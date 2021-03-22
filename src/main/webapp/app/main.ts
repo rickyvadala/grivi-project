@@ -29,6 +29,29 @@ import ConfigurationService from '@/admin/configuration/configuration.service';
 
 /* tslint:disable */
 
+import RegionService from '@/entities/region/region.service';
+import CountryService from '@/entities/country/country.service';
+import LocationService from '@/entities/location/location.service';
+import LocationTypeService from '@/entities/location-type/location-type.service';
+import DepartmentService from '@/entities/department/department.service';
+import PersonService from '@/entities/person/person.service';
+import CompanyService from '@/entities/company/company.service';
+import ChannelSubscriptionService from '@/entities/channel-subscription/channel-subscription.service';
+import ChannelService from '@/entities/channel/channel.service';
+import PostService from '@/entities/post/post.service';
+import CommentService from '@/entities/comment/comment.service';
+import FriendshipService from '@/entities/friendship/friendship.service';
+import NotificationService from '@/entities/notification/notification.service';
+import ProfesionService from '@/entities/profesion/profesion.service';
+import CategoryService from '@/entities/category/category.service';
+import ProviderProfesionService from '@/entities/provider-profesion/provider-profesion.service';
+import QuestionService from '@/entities/question/question.service';
+import ReviewQuestionService from '@/entities/review-question/review-question.service';
+import ReactionService from '@/entities/reaction/reaction.service';
+import ReviewService from '@/entities/review/review.service';
+import ReviewDetService from '@/entities/review-det/review-det.service';
+import ProfessionService from '@/entities/profession/profession.service';
+import ProviderProfessionService from '@/entities/provider-profession/provider-profession.service';
 // jhipster-needle-add-entity-service-to-main-import - JHipster will import entities services here
 
 /* tslint:enable */
@@ -91,6 +114,29 @@ new Vue({
     metricsService: () => new MetricsService(),
     alertService: () => alertService,
     translationService: () => translationService,
+    regionService: () => new RegionService(),
+    countryService: () => new CountryService(),
+    locationService: () => new LocationService(),
+    locationTypeService: () => new LocationTypeService(),
+    departmentService: () => new DepartmentService(),
+    personService: () => new PersonService(),
+    companyService: () => new CompanyService(),
+    channelSubscriptionService: () => new ChannelSubscriptionService(),
+    channelService: () => new ChannelService(),
+    postService: () => new PostService(),
+    commentService: () => new CommentService(),
+    friendshipService: () => new FriendshipService(),
+    notificationService: () => new NotificationService(),
+    profesionService: () => new ProfesionService(),
+    categoryService: () => new CategoryService(),
+    providerProfesionService: () => new ProviderProfesionService(),
+    questionService: () => new QuestionService(),
+    reviewQuestionService: () => new ReviewQuestionService(),
+    reactionService: () => new ReactionService(),
+    reviewService: () => new ReviewService(),
+    reviewDetService: () => new ReviewDetService(),
+    professionService: () => new ProfessionService(),
+    providerProfessionService: () => new ProviderProfessionService(),
     // jhipster-needle-add-entity-service-to-main - JHipster will import entities services here
     accountService: () => accountService,
   },

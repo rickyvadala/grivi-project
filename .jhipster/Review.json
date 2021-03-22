@@ -1,0 +1,52 @@
+{
+  "name": "Review",
+  "fields": [
+    {
+      "fieldName": "avgRate",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "notification",
+      "otherEntityRelationshipName": "review",
+      "relationshipName": "notification"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "reviewDet",
+      "otherEntityRelationshipName": "review",
+      "relationshipName": "reviewDet"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "asClientReviews",
+      "relationshipName": "client",
+      "otherEntityField": "person"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "asProviderReviews",
+      "relationshipName": "provider",
+      "otherEntityField": "person"
+    }
+  ],
+  "changelogDate": "20210321224107",
+  "entityTableName": "review",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

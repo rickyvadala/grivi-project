@@ -1,0 +1,23 @@
+{
+  "griviApp": {
+    "friendship": {
+      "home": {
+        "title": "Friendships",
+        "createLabel": "Crear nuevo Friendship",
+        "createOrEditLabel": "Crear o editar Friendship",
+        "notFound": "Ningún Friendships encontrado"
+      },
+      "created": "Un nuevo Friendship ha sido creado con el identificador {{ param }}",
+      "updated": "Un Friendship ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Friendship ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Friendship {{ id }}?"
+      },
+      "detail": {
+        "title": "Friendship"
+      },
+      "personOrigin": "Person Origin",
+      "personAddressee": "Person Addressee"
+    }
+  }
+}

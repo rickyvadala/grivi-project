@@ -1,0 +1,37 @@
+{
+  "name": "ProviderProfession",
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "reviewQuestion",
+      "otherEntityRelationshipName": "providerProfession",
+      "relationshipName": "reviewQuestion"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "providerProfession",
+      "relationshipName": "person",
+      "otherEntityField": "provider"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "profession",
+      "otherEntityRelationshipName": "providerProfession",
+      "relationshipName": "profession",
+      "otherEntityField": "profession"
+    }
+  ],
+  "changelogDate": "20210322020650",
+  "entityTableName": "provider_profession",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

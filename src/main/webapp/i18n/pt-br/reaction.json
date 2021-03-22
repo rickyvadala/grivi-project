@@ -1,0 +1,25 @@
+{
+  "griviApp": {
+    "reaction": {
+      "home": {
+        "title": "Reactions",
+        "createLabel": "Criar novo Reaction",
+        "createOrEditLabel": "Criar ou editar Reaction",
+        "notFound": "Nenhum Reaction encontrado"
+      },
+      "created": "Um novo Reaction foi criado com o identificador {{ param }}",
+      "updated": "Um Reaction foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Reaction foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Reaction {{ id }}?"
+      },
+      "detail": {
+        "title": "Reaction"
+      },
+      "type": "Type",
+      "notification": "Notification",
+      "person": "Person",
+      "post": "Post"
+    }
+  }
+}

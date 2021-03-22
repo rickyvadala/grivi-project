@@ -1,0 +1,31 @@
+{
+  "name": "Friendship",
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "originFriendships",
+      "relationshipName": "personOrigin",
+      "otherEntityField": "personOrigin"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "addresseeFriendships",
+      "relationshipName": "personAddressee",
+      "otherEntityField": "personAddressee"
+    }
+  ],
+  "changelogDate": "20210321223307",
+  "entityTableName": "friendship",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

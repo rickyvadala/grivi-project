@@ -1,0 +1,24 @@
+{
+  "griviApp": {
+    "providerProfession": {
+      "home": {
+        "title": "Provider Professions",
+        "createLabel": "Criar novo Provider Profession",
+        "createOrEditLabel": "Criar ou editar Provider Profession",
+        "notFound": "Nenhum Provider Profession encontrado"
+      },
+      "created": "Um novo Provider Profession foi criado com o identificador {{ param }}",
+      "updated": "Um Provider Profession foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Provider Profession foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Provider Profession {{ id }}?"
+      },
+      "detail": {
+        "title": "Provider Profession"
+      },
+      "reviewQuestion": "Review Question",
+      "person": "Person",
+      "profession": "Profession"
+    }
+  }
+}

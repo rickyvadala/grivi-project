@@ -1,0 +1,36 @@
+{
+  "name": "ReviewDet",
+  "fields": [
+    {
+      "fieldName": "rate",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "review",
+      "otherEntityRelationshipName": "reviewDet",
+      "relationshipName": "review",
+      "otherEntityField": "review"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "notification",
+      "otherEntityRelationshipName": "reviewDet",
+      "relationshipName": "question",
+      "otherEntityField": "question"
+    }
+  ],
+  "changelogDate": "20210321224207",
+  "entityTableName": "review_det",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

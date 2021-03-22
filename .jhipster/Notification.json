@@ -1,0 +1,51 @@
+{
+  "name": "Notification",
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "reviewDet",
+      "otherEntityRelationshipName": "question",
+      "relationshipName": "reviewDet"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "post",
+      "otherEntityRelationshipName": "notification",
+      "relationshipName": "post",
+      "otherEntityField": "post"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "reaction",
+      "otherEntityRelationshipName": "notification",
+      "relationshipName": "reaction",
+      "otherEntityField": "reaction"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "review",
+      "otherEntityRelationshipName": "notification",
+      "relationshipName": "review",
+      "otherEntityField": "review"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "channel",
+      "otherEntityRelationshipName": "notification",
+      "relationshipName": "channel",
+      "otherEntityField": "channel"
+    }
+  ],
+  "changelogDate": "20210321223407",
+  "entityTableName": "notification",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

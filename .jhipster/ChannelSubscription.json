@@ -1,0 +1,31 @@
+{
+  "name": "ChannelSubscription",
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "channelSubscription",
+      "relationshipName": "person",
+      "otherEntityField": "person"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "channel",
+      "otherEntityRelationshipName": "channelSubscription",
+      "relationshipName": "channel",
+      "otherEntityField": "channel"
+    }
+  ],
+  "changelogDate": "20210321222907",
+  "entityTableName": "channel_subscription",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

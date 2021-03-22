@@ -1,0 +1,24 @@
+{
+  "griviApp": {
+    "locationType": {
+      "home": {
+        "title": "Location Types",
+        "createLabel": "Criar novo Location Type",
+        "createOrEditLabel": "Criar ou editar Location Type",
+        "notFound": "Nenhum Location Type encontrado"
+      },
+      "created": "Um novo Location Type foi criado com o identificador {{ param }}",
+      "updated": "Um Location Type foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Location Type foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Location Type {{ id }}?"
+      },
+      "detail": {
+        "title": "Location Type"
+      },
+      "name": "Name",
+      "description": "Description",
+      "location": "Location"
+    }
+  }
+}

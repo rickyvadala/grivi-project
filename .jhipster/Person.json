@@ -1,0 +1,100 @@
+{
+  "name": "Person",
+  "fields": [
+    {
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "birthDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "friendship",
+      "otherEntityRelationshipName": "personOrigin",
+      "relationshipName": "originFriendships"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "friendship",
+      "otherEntityRelationshipName": "personAddressee",
+      "relationshipName": "addresseeFriendships"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "channelSubscription",
+      "otherEntityRelationshipName": "person",
+      "relationshipName": "channelSubscription"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "providerProfession",
+      "otherEntityRelationshipName": "person",
+      "relationshipName": "providerProfession"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "reaction",
+      "otherEntityRelationshipName": "person",
+      "relationshipName": "reaction"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "review",
+      "otherEntityRelationshipName": "client",
+      "relationshipName": "asClientReviews"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "review",
+      "otherEntityRelationshipName": "provider",
+      "relationshipName": "asProviderReviews"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "company",
+      "otherEntityRelationshipName": "person",
+      "relationshipName": "company",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "location",
+      "otherEntityRelationshipName": "person",
+      "relationshipName": "location",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "channel",
+      "otherEntityRelationshipName": "person",
+      "relationshipName": "channel",
+      "otherEntityField": "id",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20210321222707",
+  "entityTableName": "person",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

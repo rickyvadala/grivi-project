@@ -1,0 +1,44 @@
+{
+  "name": "Category",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "profession",
+      "otherEntityRelationshipName": "category",
+      "relationshipName": "profession"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "channel",
+      "otherEntityRelationshipName": "category",
+      "relationshipName": "channel"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "reviewQuestion",
+      "otherEntityRelationshipName": "category",
+      "relationshipName": "reviewQuestion"
+    }
+  ],
+  "changelogDate": "20210321223607",
+  "entityTableName": "category",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

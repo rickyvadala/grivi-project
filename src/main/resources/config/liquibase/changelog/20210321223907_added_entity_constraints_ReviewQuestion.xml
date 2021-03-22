@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity ReviewQuestion.
+    -->
+    <changeSet id="20210321223907-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="question_id"
+                                 baseTableName="review_question"
+                                 constraintName="fk_review_question_question_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="question"/>
+
+        <addForeignKeyConstraint baseColumnNames="category_id"
+                                 baseTableName="review_question"
+                                 constraintName="fk_review_question_category_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="category"/>
+
+        <addForeignKeyConstraint baseColumnNames="profession_id"
+                                 baseTableName="review_question"
+                                 constraintName="fk_review_question_profession_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="profession"/>
+
+        <addForeignKeyConstraint baseColumnNames="provider_profession_id"
+                                 baseTableName="review_question"
+                                 constraintName="fk_review_question_provider_profession_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="provider_profession"/>
+
+    </changeSet>
+</databaseChangeLog>

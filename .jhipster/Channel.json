@@ -1,0 +1,56 @@
+{
+  "name": "Channel",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "channelSubscription",
+      "otherEntityRelationshipName": "channel",
+      "relationshipName": "channelSubscription"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "notification",
+      "otherEntityRelationshipName": "channel",
+      "relationshipName": "notification"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "channel",
+      "relationshipName": "person",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "category",
+      "otherEntityRelationshipName": "channel",
+      "relationshipName": "category",
+      "otherEntityField": "category"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "profession",
+      "otherEntityRelationshipName": "channel",
+      "relationshipName": "profession",
+      "otherEntityField": "profession"
+    }
+  ],
+  "changelogDate": "20210321223007",
+  "entityTableName": "channel",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

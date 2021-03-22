@@ -1,0 +1,26 @@
+{
+  "griviApp": {
+    "reviewQuestion": {
+      "home": {
+        "title": "Review Questions",
+        "createLabel": "Criar novo Review Question",
+        "createOrEditLabel": "Criar ou editar Review Question",
+        "notFound": "Nenhum Review Question encontrado"
+      },
+      "created": "Um novo Review Question foi criado com o identificador {{ param }}",
+      "updated": "Um Review Question foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Review Question foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Review Question {{ id }}?"
+      },
+      "detail": {
+        "title": "Review Question"
+      },
+      "enabled": "Enabled",
+      "question": "Question",
+      "category": "Category",
+      "profession": "Profession",
+      "providerProfession": "Provider Profession"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "griviApp": {
+    "reviewDet": {
+      "home": {
+        "title": "Review Dets",
+        "createLabel": "Create a new Review Det",
+        "createOrEditLabel": "Create or edit a Review Det",
+        "notFound": "No Review Dets found"
+      },
+      "created": "A new Review Det is created with identifier {{ param }}",
+      "updated": "A Review Det is updated with identifier {{ param }}",
+      "deleted": "A Review Det is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Review Det {{ id }}?"
+      },
+      "detail": {
+        "title": "Review Det"
+      },
+      "rate": "Rate",
+      "review": "Review",
+      "question": "Question"
+    }
+  }
+}

@@ -1,3 +1,4 @@
+
 entity Region {
 	regionName String
 }
@@ -6,19 +7,17 @@ entity Country {
 	countryName String
 }
 
-// an ignored comment
-/** not an ignored comment */
+entity LocationType {
+	name String,
+    description String
+}
+
 entity Location {
 	streetAddress String,
     streetNumber Long,
 	postalCode String,
 	city String,
 	stateProvince String
-}
-
-entity LocationType {
-	name String,
-    description String
 }
 
 entity Department {
@@ -42,14 +41,10 @@ entity Company {
 }
 
 entity ChannelSubscription {
-	person Long,
-    channel Long
 }
 
 entity Channel {
-	name String,
-    category Long,
-    profesion Long
+	name String
 }
 
 entity Post {
@@ -58,26 +53,17 @@ entity Post {
 }
 
 entity Comment {
-	postIdFrom Long,
-    postId Long
 }
 
 entity Friendship {
-	personOrigin Long,
-    personAddressee Long
 }
 
 entity Notification {
-	channel Long required,
-    post Long,
-    review Long,
-    reaction Long
 }
 
-entity Profesion {
+entity Profession {
 	name String,
-    description String,
-    category Long
+    description String
 }
 
 entity Category {
@@ -85,14 +71,13 @@ entity Category {
     description String
 }
 
-entity ProviderProfesion {
-	provider Long,
-    profesion Long
-}
-
 entity Question {
 	name String,
     text String
+}
+
+entity ProviderProfession {
+
 }
 
 entity ReviewQuestion {
@@ -100,9 +85,7 @@ entity ReviewQuestion {
 }
 
 entity Reaction {
-	type String,
-    post Long,
-    person Long
+	type String
 }
 
 entity Review {
@@ -129,42 +112,41 @@ relationship ManyToMany {
 // defining multiple OneToMany relationships with comments
 relationship OneToMany {
 	LocationType to Location{type}
-    Person to Friendship{person(personOrigin)}
-    Person to Friendship{person(personAddressee)}
+
+    Person {originFriendships} to Friendship{personOrigin(personOrigin)}
+    Person {addresseeFriendships} to Friendship{personAddressee(personAddressee)}
+
     Person to ChannelSubscription{person(person)}
-    Person to ProviderProfesion{person(provider)}
-    Person to Reaction{person(person)}
+    Channel to ChannelSubscription{channel(channel)}
+
+    Person to ProviderProfession{person(provider)}
+    Profession to ProviderProfession{profession(profession)}
+
+    Category to Profession{category(category)}
+
     Post to Notification{post(post)}
+    Reaction to Notification{reaction(reaction)}
+
+    Person to Reaction{person(person)}
     Post to Reaction{post(post)}
-    Post to Comment{post(postIdFrom)}
-    Post to Comment{post(postId)}
+
+    Post {commentsFrom} to Comment{postFrom(postFrom)}
+    Post {comments} to Comment{post(post)}
+
     Review to Notification{review(review)}
+    Channel to Notification{channel(channel)}
+
     Review to ReviewDet{review(review)}
     Notification to ReviewDet{question(question)}
-    Reaction to Notification{reaction(reaction)}
-    Channel to ChannelSubscription{channel(channel)}
-    Channel to Notification{channel(channel)}
+
     Category to Channel{category(category)}
-    Category to Profesion{category(category)}
-    Profesion to Channel{profesion(profesion)}
-    Profesion to ProviderProfesion{profesion(profesion)}
-    Person to Review{client(person)}
-    Person to Review{provider(person)}
+    Profession to Channel{profession(profession)}
+
+    Person {asClientReviews} to Review{client(person)}
+    Person {asProviderReviews} to Review{provider(person)}
+
     Question to ReviewQuestion{question(question)}
     Category to ReviewQuestion{category(category)}
-    Profesion to ReviewQuestion{profesion(profesion)}
-    ProviderProfesion to ReviewQuestion{providerProfesion(providerProfesion)}
+    Profession to ReviewQuestion{profession(profession)}
+    ProviderProfession to ReviewQuestion{providerProfession(providerProfession)}
 }
-
-// Set pagination options
-// paginate JobHistory, Employee with infinite-scroll
-// paginate Job with pagination
-
-// Use Data Transfer Objects (DTO)
-// dto * with mapstruct
-
-// Set service options to all except few
-// service all with serviceImpl except Employee, Job
-
-// Set an angular suffix
-// angularSuffix * with mySuffix

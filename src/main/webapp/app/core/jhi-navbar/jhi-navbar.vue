@@ -32,6 +32,98 @@
                         <font-awesome-icon icon="th-list" />
                         <span v-text="$t('global.menu.entities.main')">Entities</span>
                     </span>
+                    <b-dropdown-item to="/region">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.region')">Region</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/country">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.country')">Country</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/location">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.location')">Location</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/location-type">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.locationType')">LocationType</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/department">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.department')">Department</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/person">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.person')">Person</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/company">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.company')">Company</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/channel-subscription">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.channelSubscription')">ChannelSubscription</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/channel">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.channel')">Channel</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/post">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.post')">Post</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/comment">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.comment')">Comment</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/friendship">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.friendship')">Friendship</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/notification">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.notification')">Notification</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/profesion">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.profesion')">Profesion</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/category">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.category')">Category</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/provider-profesion">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.providerProfesion')">ProviderProfesion</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/question">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.question')">Question</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/review-question">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.reviewQuestion')">ReviewQuestion</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/reaction">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.reaction')">Reaction</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/review">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.review')">Review</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/review-det">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.reviewDet')">ReviewDet</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/profession">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.profession')">Profession</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/provider-profession">
+                        <font-awesome-icon icon="asterisk" />
+                        <span v-text="$t('global.menu.entities.providerProfession')">ProviderProfession</span>
+                    </b-dropdown-item>
                     <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
                 </b-nav-item-dropdown>
                 <b-nav-item-dropdown

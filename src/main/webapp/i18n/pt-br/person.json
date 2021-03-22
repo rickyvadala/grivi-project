@@ -1,0 +1,35 @@
+{
+  "griviApp": {
+    "person": {
+      "home": {
+        "title": "People",
+        "createLabel": "Criar novo Person",
+        "createOrEditLabel": "Criar ou editar Person",
+        "notFound": "Nenhum Person encontrado"
+      },
+      "created": "Um novo Person foi criado com o identificador {{ param }}",
+      "updated": "Um Person foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Person foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Person {{ id }}?"
+      },
+      "detail": {
+        "title": "Person"
+      },
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "birthDate": "Birth Date",
+      "phoneNumber": "Phone Number",
+      "originFriendships": "Origin Friendships",
+      "addresseeFriendships": "Addressee Friendships",
+      "channelSubscription": "Channel Subscription",
+      "providerProfession": "Provider Profession",
+      "reaction": "Reaction",
+      "asClientReviews": "As Client Reviews",
+      "asProviderReviews": "As Provider Reviews",
+      "company": "Company",
+      "location": "Location",
+      "channel": "Channel"
+    }
+  }
+}

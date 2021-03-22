@@ -1,0 +1,42 @@
+{
+  "name": "Reaction",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "notification",
+      "otherEntityRelationshipName": "reaction",
+      "relationshipName": "notification"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "reaction",
+      "relationshipName": "person",
+      "otherEntityField": "person"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "post",
+      "otherEntityRelationshipName": "reaction",
+      "relationshipName": "post",
+      "otherEntityField": "post"
+    }
+  ],
+  "changelogDate": "20210321224007",
+  "entityTableName": "reaction",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

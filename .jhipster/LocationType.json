@@ -1,0 +1,32 @@
+{
+  "name": "LocationType",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "location",
+      "otherEntityRelationshipName": "type",
+      "relationshipName": "location"
+    }
+  ],
+  "changelogDate": "20210321222507",
+  "entityTableName": "location_type",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

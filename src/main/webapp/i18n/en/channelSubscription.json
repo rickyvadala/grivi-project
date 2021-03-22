@@ -1,0 +1,23 @@
+{
+  "griviApp": {
+    "channelSubscription": {
+      "home": {
+        "title": "Channel Subscriptions",
+        "createLabel": "Create a new Channel Subscription",
+        "createOrEditLabel": "Create or edit a Channel Subscription",
+        "notFound": "No Channel Subscriptions found"
+      },
+      "created": "A new Channel Subscription is created with identifier {{ param }}",
+      "updated": "A Channel Subscription is updated with identifier {{ param }}",
+      "deleted": "A Channel Subscription is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Channel Subscription {{ id }}?"
+      },
+      "detail": {
+        "title": "Channel Subscription"
+      },
+      "person": "Person",
+      "channel": "Channel"
+    }
+  }
+}

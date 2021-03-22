@@ -1,0 +1,32 @@
+{
+  "name": "Question",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "text",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "reviewQuestion",
+      "otherEntityRelationshipName": "question",
+      "relationshipName": "reviewQuestion"
+    }
+  ],
+  "changelogDate": "20210321223807",
+  "entityTableName": "question",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
