@@ -42,9 +42,7 @@ import PostService from '@/entities/post/post.service';
 import CommentService from '@/entities/comment/comment.service';
 import FriendshipService from '@/entities/friendship/friendship.service';
 import NotificationService from '@/entities/notification/notification.service';
-import ProfesionService from '@/entities/profesion/profesion.service';
 import CategoryService from '@/entities/category/category.service';
-import ProviderProfesionService from '@/entities/provider-profesion/provider-profesion.service';
 import QuestionService from '@/entities/question/question.service';
 import ReviewQuestionService from '@/entities/review-question/review-question.service';
 import ReactionService from '@/entities/reaction/reaction.service';
@@ -104,11 +102,8 @@ new Vue({
     activateService: () => new ActivateService(),
     registerService: () => new RegisterService(),
     userService: () => new UserManagementService(),
-
     auditsService: () => new AuditsService(),
-
     healthService: () => new HealthService(),
-
     configurationService: () => new ConfigurationService(),
     logsService: () => new LogsService(),
     metricsService: () => new MetricsService(),
@@ -127,9 +122,7 @@ new Vue({
     commentService: () => new CommentService(),
     friendshipService: () => new FriendshipService(),
     notificationService: () => new NotificationService(),
-    profesionService: () => new ProfesionService(),
     categoryService: () => new CategoryService(),
-    providerProfesionService: () => new ProviderProfesionService(),
     questionService: () => new QuestionService(),
     reviewQuestionService: () => new ReviewQuestionService(),
     reactionService: () => new ReactionService(),

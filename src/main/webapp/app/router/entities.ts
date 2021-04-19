@@ -81,23 +81,11 @@ const NotificationUpdate = () => import('@/entities/notification/notification-up
 // prettier-ignore
 const NotificationDetails = () => import('@/entities/notification/notification-details.vue');
 // prettier-ignore
-const Profesion = () => import('@/entities/profesion/profesion.vue');
-// prettier-ignore
-const ProfesionUpdate = () => import('@/entities/profesion/profesion-update.vue');
-// prettier-ignore
-const ProfesionDetails = () => import('@/entities/profesion/profesion-details.vue');
-// prettier-ignore
 const Category = () => import('@/entities/category/category.vue');
 // prettier-ignore
 const CategoryUpdate = () => import('@/entities/category/category-update.vue');
 // prettier-ignore
 const CategoryDetails = () => import('@/entities/category/category-details.vue');
-// prettier-ignore
-const ProviderProfesion = () => import('@/entities/provider-profesion/provider-profesion.vue');
-// prettier-ignore
-const ProviderProfesionUpdate = () => import('@/entities/provider-profesion/provider-profesion-update.vue');
-// prettier-ignore
-const ProviderProfesionDetails = () => import('@/entities/provider-profesion/provider-profesion-details.vue');
 // prettier-ignore
 const Question = () => import('@/entities/question/question.vue');
 // prettier-ignore
@@ -456,30 +444,6 @@ export default [
     meta: { authorities: [Authority.USER] },
   },
   {
-    path: '/profesion',
-    name: 'Profesion',
-    component: Profesion,
-    meta: { authorities: [Authority.USER] },
-  },
-  {
-    path: '/profesion/new',
-    name: 'ProfesionCreate',
-    component: ProfesionUpdate,
-    meta: { authorities: [Authority.USER] },
-  },
-  {
-    path: '/profesion/:profesionId/edit',
-    name: 'ProfesionEdit',
-    component: ProfesionUpdate,
-    meta: { authorities: [Authority.USER] },
-  },
-  {
-    path: '/profesion/:profesionId/view',
-    name: 'ProfesionView',
-    component: ProfesionDetails,
-    meta: { authorities: [Authority.USER] },
-  },
-  {
     path: '/category',
     name: 'Category',
     component: Category,
@@ -501,30 +465,6 @@ export default [
     path: '/category/:categoryId/view',
     name: 'CategoryView',
     component: CategoryDetails,
-    meta: { authorities: [Authority.USER] },
-  },
-  {
-    path: '/provider-profesion',
-    name: 'ProviderProfesion',
-    component: ProviderProfesion,
-    meta: { authorities: [Authority.USER] },
-  },
-  {
-    path: '/provider-profesion/new',
-    name: 'ProviderProfesionCreate',
-    component: ProviderProfesionUpdate,
-    meta: { authorities: [Authority.USER] },
-  },
-  {
-    path: '/provider-profesion/:providerProfesionId/edit',
-    name: 'ProviderProfesionEdit',
-    component: ProviderProfesionUpdate,
-    meta: { authorities: [Authority.USER] },
-  },
-  {
-    path: '/provider-profesion/:providerProfesionId/view',
-    name: 'ProviderProfesionView',
-    component: ProviderProfesionDetails,
     meta: { authorities: [Authority.USER] },
   },
   {
@@ -790,54 +730,6 @@ export default [
     path: '/notification/:notificationId/view',
     name: 'NotificationView',
     component: NotificationDetails,
-    meta: { authorities: [Authority.USER] },
-  },
-  {
-    path: '/profesion',
-    name: 'Profesion',
-    component: Profesion,
-    meta: { authorities: [Authority.USER] },
-  },
-  {
-    path: '/profesion/new',
-    name: 'ProfesionCreate',
-    component: ProfesionUpdate,
-    meta: { authorities: [Authority.USER] },
-  },
-  {
-    path: '/profesion/:profesionId/edit',
-    name: 'ProfesionEdit',
-    component: ProfesionUpdate,
-    meta: { authorities: [Authority.USER] },
-  },
-  {
-    path: '/profesion/:profesionId/view',
-    name: 'ProfesionView',
-    component: ProfesionDetails,
-    meta: { authorities: [Authority.USER] },
-  },
-  {
-    path: '/provider-profesion',
-    name: 'ProviderProfesion',
-    component: ProviderProfesion,
-    meta: { authorities: [Authority.USER] },
-  },
-  {
-    path: '/provider-profesion/new',
-    name: 'ProviderProfesionCreate',
-    component: ProviderProfesionUpdate,
-    meta: { authorities: [Authority.USER] },
-  },
-  {
-    path: '/provider-profesion/:providerProfesionId/edit',
-    name: 'ProviderProfesionEdit',
-    component: ProviderProfesionUpdate,
-    meta: { authorities: [Authority.USER] },
-  },
-  {
-    path: '/provider-profesion/:providerProfesionId/view',
-    name: 'ProviderProfesionView',
-    component: ProviderProfesionDetails,
     meta: { authorities: [Authority.USER] },
   },
   {

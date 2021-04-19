@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ribbon></ribbon>
+<!--    <ribbon></ribbon>-->
     <div id="app-header">
       <jhi-navbar></jhi-navbar>
     </div>
@@ -13,7 +13,7 @@
         <login-form></login-form>
       </b-modal>
 
-      <jhi-footer></jhi-footer>
+<!--      <jhi-footer></jhi-footer>-->
     </div>
   </div>
 </template>
