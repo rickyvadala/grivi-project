@@ -5,7 +5,7 @@
                 <h1 class="display-4 text-center" v-text="$t('home.title')">Grivi!</h1>
                 <login-form></login-form>
             </div>
-            <div class="col-md-6 home--login-image d-none d-lg-block">
+            <div class="col-md-6 home--login-image d-none d-lg-block p-0">
                 <span class="hipster img-fluid rounded"></span>
             </div>
         </div>
