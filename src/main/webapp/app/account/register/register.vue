@@ -12,23 +12,29 @@
                     <strong>Registration failed!</strong> Please try again later.
                 </div>
 
-                <div class="alert alert-danger" role="alert" v-if="errorUserExists" v-html="$t('register.messages.error.userexists')">
+                <div class="alert alert-danger" role="alert" v-if="errorUserExists"
+                     v-html="$t('register.messages.error.userexists')">
                     <strong>Login name already registered!</strong> Please choose another one.
                 </div>
 
-                <div class="alert alert-danger" role="alert" v-if="errorEmailExists" v-html="$t('register.messages.error.emailexists')">
+                <div class="alert alert-danger" role="alert" v-if="errorEmailExists"
+                     v-html="$t('register.messages.error.emailexists')">
                     <strong>Email is already in use!</strong> Please choose another one.
                 </div>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <form id="register-form" name="registerForm" role="form" v-on:submit.prevent="register()" v-if="!success" no-validate>
+                <form id="register-form" name="registerForm" role="form" v-on:submit.prevent="register()"
+                      v-if="!success" no-validate>
                     <div class="form-group">
                         <label class="form-control-label" for="username" v-text="$t('global.form[\'username.label\']')">Username</label>
-                        <input type="text" class="form-control" v-model="$v.registerAccount.login.$model" id="username" name="login"
+                        <input type="text" class="form-control" v-model="$v.registerAccount.login.$model" id="username"
+                               name="login"
                                :class="{'valid': !$v.registerAccount.login.$invalid, 'invalid': $v.registerAccount.login.$invalid }"
-                               required minlength="1" maxlength="50" pattern="^[a-zA-Z0-9!#$&'*+=?^_`{|}~.-]+@?[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" v-bind:placeholder="$t('global.form[\'username.placeholder\']')">
+                               required minlength="1" maxlength="50"
+                               pattern="^[a-zA-Z0-9!#$&'*+=?^_`{|}~.-]+@?[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                               v-bind:placeholder="$t('global.form[\'username.placeholder\']')">
                         <div v-if="$v.registerAccount.login.$anyDirty && $v.registerAccount.login.$invalid">
                             <small class="form-text text-danger" v-if="!$v.registerAccount.login.required"
                                    v-text="$t('register.messages.validate.login.required')">
@@ -49,10 +55,12 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="form-control-label" for="email" v-text="$t('global.form[\'email.label\']')">Email</label>
+                        <label class="form-control-label" for="email"
+                               v-text="$t('global.form[\'email.label\']')">Email</label>
                         <input type="email" class="form-control" id="email" name="email"
                                :class="{'valid': !$v.registerAccount.email.$invalid, 'invalid': $v.registerAccount.email.$invalid }"
-                               v-model="$v.registerAccount.email.$model" minlength=5 maxlength=254 email required  v-bind:placeholder="$t('global.form[\'email.placeholder\']')">
+                               v-model="$v.registerAccount.email.$model" minlength=5 maxlength=254 email required
+                               v-bind:placeholder="$t('global.form[\'email.placeholder\']')">
                         <div v-if="$v.registerAccount.email.$anyDirty && $v.registerAccount.email.$invalid">
                             <small class="form-text text-danger" v-if="!$v.registerAccount.email.required"
                                    v-text="$t('global.messages.validate.email.required')">
@@ -73,10 +81,12 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="form-control-label" for="firstPassword" v-text="$t('global.form[\'newpassword.label\']')">New password</label>
+                        <label class="form-control-label" for="firstPassword"
+                               v-text="$t('global.form[\'newpassword.label\']')">New password</label>
                         <input type="password" class="form-control" id="firstPassword" name="password"
                                :class="{'valid': !$v.registerAccount.password.$invalid, 'invalid': $v.registerAccount.password.$invalid }"
-                               v-model="$v.registerAccount.password.$model" minlength=4 maxlength=50 required v-bind:placeholder="$t('global.form[\'newpassword.placeholder\']')">
+                               v-model="$v.registerAccount.password.$model" minlength=4 maxlength=50 required
+                               v-bind:placeholder="$t('global.form[\'newpassword.placeholder\']')">
                         <div v-if="$v.registerAccount.password.$anyDirty && $v.registerAccount.password.$invalid">
                             <small class="form-text text-danger" v-if="!$v.registerAccount.password.required"
                                    v-text="$t('global.messages.validate.newpassword.required')">
@@ -94,10 +104,12 @@
                         <!--<jhi-password-strength-bar [passwordToCheck]="registerAccount.password"></jhi-password-strength-bar>-->
                     </div>
                     <div class="form-group">
-                        <label class="form-control-label" for="secondPassword" v-text="$t('global.form[\'confirmpassword.label\']')">New password confirmation</label>
+                        <label class="form-control-label" for="secondPassword"
+                               v-text="$t('global.form[\'confirmpassword.label\']')">New password confirmation</label>
                         <input type="password" class="form-control" id="secondPassword" name="confirmPasswordInput"
                                :class="{'valid': !$v.confirmPassword.$invalid, 'invalid': $v.confirmPassword.$invalid }"
-                               v-model="$v.confirmPassword.$model" minlength=4 maxlength=50 required v-bind:placeholder="$t('global.form[\'confirmpassword.placeholder\']')">
+                               v-model="$v.confirmPassword.$model" minlength=4 maxlength=50 required
+                               v-bind:placeholder="$t('global.form[\'confirmpassword.placeholder\']')">
                         <div v-if="$v.confirmPassword.$dirty && $v.confirmPassword.$invalid">
                             <small class="form-text text-danger" v-if="!$v.confirmPassword.required"
                                    v-text="$t('global.messages.validate.confirmpassword.required')">
@@ -118,13 +130,10 @@
                         </div>
                     </div>
 
-                    <button type="submit" :disabled="$v.$invalid " class="btn btn-primary" v-text="$t('register.form.button')">Register</button>
+                    <button type="submit" :disabled="$v.$invalid " class="btn btn-primary"
+                            v-text="$t('register.form.button')">Register
+                    </button>
                 </form>
-                <p></p>
-                <div class="alert alert-warning">
-                    <span v-text="$t('global.messages.info.authenticated.prefix')">If you want to </span>
-                    <a class="alert-link" v-on:click="openLogin()" v-text="$t('global.messages.info.authenticated.link')">sign in</a><span v-html="$t('global.messages.info.authenticated.suffix')">, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").</span>
-                </div>
             </div>
         </div>
     </div>
