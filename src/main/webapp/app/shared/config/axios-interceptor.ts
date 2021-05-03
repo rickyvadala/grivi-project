@@ -12,7 +12,8 @@ const onRequestSuccess = config => {
     config.headers.Authorization = `Bearer ${token}`;
   }
   config.timeout = TIMEOUT;
-  config.url = `${SERVER_API_URL}${config.url}`;
+  const serverApiUrl = config.url.indexOf('i18n') !== -1 ? '' : SERVER_API_URL;
+  config.url = `${serverApiUrl}${config.url}`;
   return config;
 };
 const setupAxiosInterceptors = onUnauthenticated => {

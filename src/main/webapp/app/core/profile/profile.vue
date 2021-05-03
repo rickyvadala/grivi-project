@@ -1,13 +1,8 @@
 <template>
-$END$
+    <div>
+        This is the profile
+    </div>
 </template>
 
-<script>
-export default {
-name: "profile"
-}
+<script lang="ts" src="./profile.component.ts">
 </script>
-
-<style scoped>
-
-</style>

@@ -4,7 +4,7 @@ const prodEnv = require('./prod.env');
 
 module.exports = merge(prodEnv, {
   NODE_ENV: '"development"',
-  SERVER_API_URL: '\'\'',
+  SERVER_API_URL: '"http://localhost:8085/"',
   BUILD_TIMESTAMP: `'${new Date().getTime()}'`,
   // APP_VERSION is passed as an environment variable from the Gradle / Maven build tasks.
   VERSION: `'${process.env.hasOwnProperty('APP_VERSION') ? process.env.APP_VERSION : '1.0'}'`,

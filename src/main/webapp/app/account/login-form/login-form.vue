@@ -32,17 +32,20 @@
             </div>
         </div>
         <div class="row justify-content-center mt-3">
-            <div class="col-md-4 col-12">
+            <div class="col-md-6 col-12">
                 <b-link :to="'/account/reset/request'" class="alert-link" v-text="$t('login.password.forgot')">Did you
                     forget your password?
                 </b-link>
             </div>
-            <div class="col-md-4 col-12">
+        </div>
+        <div class="row justify-content-center mt-3">
+            <div class="col-md-6 col-12">
                 <b-link :to="'/register'" class="alert-link" v-text="$t('global.messages.info.register.link')">Register
                     a new account
                 </b-link>
             </div>
         </div>
+    </div>
     </div>
 </template>
 <script lang="ts" src="./login-form.component.ts">

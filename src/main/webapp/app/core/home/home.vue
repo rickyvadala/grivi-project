@@ -9,11 +9,11 @@
                 <span class="hipster img-fluid rounded"></span>
             </div>
         </div>
-        <div class="alert alert-success" v-if="authenticated">
+        <profile v-if="authenticated">
             <span v-if="username" v-text="$t('home.logged.message', { 'username': username})">You are logged in as user "{{
                     username
                 }}"</span>
-        </div>
+        </profile>
     </div>
 </template>
 
