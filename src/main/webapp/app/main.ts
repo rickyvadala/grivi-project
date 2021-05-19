@@ -51,6 +51,7 @@ import ReviewDetService from '@/entities/review-det/review-det.service';
 import ProfessionService from '@/entities/profession/profession.service';
 import ProviderProfessionService from '@/entities/provider-profession/provider-profession.service';
 // jhipster-needle-add-entity-service-to-main-import - JHipster will import entities services here
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue';
 
 /* tslint:enable */
 Vue.config.productionTip = false;
@@ -58,6 +59,8 @@ config.initVueApp(Vue);
 config.initFortAwesome(Vue);
 bootstrapVueConfig.initBootstrapVue(Vue);
 Vue.use(Vue2Filters);
+Vue.use(BootstrapVue);
+Vue.use(BootstrapVueIcons);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.component('jhi-item-count', JhiItemCountComponent);
 Vue.component('jhi-sort-indicator', JhiSortIndicatorComponent);
