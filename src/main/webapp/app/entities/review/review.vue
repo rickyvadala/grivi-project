@@ -47,7 +47,7 @@
                     </td>
                     <td>
                         <div v-if="review.provider">
-                            <router-link :to="{name: 'PersonView', params: {personId: review.provider.id}}">{{review.provider.person}}</router-link>
+                            <router-link :to="{name: 'ProviderProfessionView', params: {providerProfessionId: review.provider.id}}">{{review.provider.person}}</router-link>
                         </div>
                     </td>
                     <td class="text-right">

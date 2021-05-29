@@ -143,10 +143,10 @@ relationship OneToMany {
     Profession to Channel{profession(profession)}
 
     Person {asClientReviews} to Review{client(person)}
-    Person {asProviderReviews} to Review{provider(person)}
 
     Question to ReviewQuestion{question(question)}
     Category to ReviewQuestion{category(category)}
     Profession to ReviewQuestion{profession(profession)}
     ProviderProfession to ReviewQuestion{providerProfession(providerProfession)}
+    ProviderProfession to Review{provider(person)}
 }

@@ -1,6 +1,7 @@
 import { INotification } from '@/shared/model/notification.model';
 import { IReviewDet } from '@/shared/model/review-det.model';
 import { IPerson } from '@/shared/model/person.model';
+import { IProviderProfession } from '@/shared/model/provider-profession.model';
 
 export interface IReview {
   id?: number;
@@ -9,7 +10,7 @@ export interface IReview {
   notifications?: INotification[];
   reviewDets?: IReviewDet[];
   client?: IPerson;
-  provider?: IPerson;
+  provider?: IProviderProfession;
 }
 
 export class Review implements IReview {
@@ -20,6 +21,6 @@ export class Review implements IReview {
     public notifications?: INotification[],
     public reviewDets?: IReviewDet[],
     public client?: IPerson,
-    public provider?: IPerson
+    public provider?: IProviderProfession
   ) {}
 }

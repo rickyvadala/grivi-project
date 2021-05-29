@@ -39,8 +39,8 @@ public class Review implements Serializable {
     private Person client;
 
     @ManyToOne
-    @JsonIgnoreProperties(value = "asProviderReviews", allowSetters = true)
-    private Person provider;
+    @JsonIgnoreProperties(value = "reviews", allowSetters = true)
+    private ProviderProfession provider;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -140,17 +140,17 @@ public class Review implements Serializable {
         this.client = person;
     }
 
-    public Person getProvider() {
+    public ProviderProfession getProvider() {
         return provider;
     }
 
-    public Review provider(Person person) {
-        this.provider = person;
+    public Review provider(ProviderProfession providerProfession) {
+        this.provider = providerProfession;
         return this;
     }
 
-    public void setProvider(Person person) {
-        this.provider = person;
+    public void setProvider(ProviderProfession providerProfession) {
+        this.provider = providerProfession;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
 
