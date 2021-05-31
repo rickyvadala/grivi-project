@@ -5,6 +5,9 @@ import { numeric, required, minLength, maxLength, minValue, maxValue } from 'vue
 import ReviewQuestionService from '../review-question/review-question.service';
 import { IReviewQuestion } from '@/shared/model/review-question.model';
 
+import ReviewService from '../review/review.service';
+import { IReview } from '@/shared/model/review.model';
+
 import PersonService from '../person/person.service';
 import { IPerson } from '@/shared/model/person.model';
 
@@ -30,6 +33,10 @@ export default class ProviderProfessionUpdate extends Vue {
   @Inject('reviewQuestionService') private reviewQuestionService: () => ReviewQuestionService;
 
   public reviewQuestions: IReviewQuestion[] = [];
+
+  @Inject('reviewService') private reviewService: () => ReviewService;
+
+  public reviews: IReview[] = [];
 
   @Inject('personService') private personService: () => PersonService;
 
@@ -100,6 +107,11 @@ export default class ProviderProfessionUpdate extends Vue {
       .retrieve()
       .then(res => {
         this.reviewQuestions = res.data;
+      });
+    this.reviewService()
+      .retrieve()
+      .then(res => {
+        this.reviews = res.data;
       });
     this.personService()
       .retrieve()

@@ -15,6 +15,9 @@ import { IReviewDet } from '@/shared/model/review-det.model';
 import PersonService from '../person/person.service';
 import { IPerson } from '@/shared/model/person.model';
 
+import ProviderProfessionService from '../provider-profession/provider-profession.service';
+import { IProviderProfession } from '@/shared/model/provider-profession.model';
+
 import AlertService from '@/shared/alert/alert.service';
 import { IReview, Review } from '@/shared/model/review.model';
 import ReviewService from './review.service';
@@ -45,6 +48,10 @@ export default class ReviewUpdate extends Vue {
   @Inject('personService') private personService: () => PersonService;
 
   public people: IPerson[] = [];
+
+  @Inject('providerProfessionService') private providerProfessionService: () => ProviderProfessionService;
+
+  public providerProfessions: IProviderProfession[] = [];
   public isSaving = false;
   public currentLanguage = '';
 
@@ -142,10 +149,10 @@ export default class ReviewUpdate extends Vue {
       .then(res => {
         this.people = res.data;
       });
-    this.personService()
+    this.providerProfessionService()
       .retrieve()
       .then(res => {
-        this.people = res.data;
+        this.providerProfessions = res.data;
       });
   }
 }

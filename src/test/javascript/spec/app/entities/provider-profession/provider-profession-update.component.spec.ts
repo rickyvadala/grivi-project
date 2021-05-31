@@ -11,6 +11,8 @@ import ProviderProfessionService from '@/entities/provider-profession/provider-p
 
 import ReviewQuestionService from '@/entities/review-question/review-question.service';
 
+import ReviewService from '@/entities/review/review.service';
+
 import PersonService from '@/entities/person/person.service';
 
 import ProfessionService from '@/entities/profession/profession.service';
@@ -43,6 +45,8 @@ describe('Component Tests', () => {
           providerProfessionService: () => providerProfessionServiceStub,
 
           reviewQuestionService: () => new ReviewQuestionService(),
+
+          reviewService: () => new ReviewService(),
 
           personService: () => new PersonService(),
 

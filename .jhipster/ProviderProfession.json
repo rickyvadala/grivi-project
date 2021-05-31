@@ -9,6 +9,12 @@
       "relationshipName": "reviewQuestion"
     },
     {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "review",
+      "otherEntityRelationshipName": "provider",
+      "relationshipName": "review"
+    },
+    {
       "relationshipType": "many-to-one",
       "otherEntityName": "person",
       "otherEntityRelationshipName": "providerProfession",

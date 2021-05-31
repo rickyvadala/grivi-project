@@ -34,7 +34,7 @@
                         <label class="form-control-label" v-text="$t('griviApp.review.provider')" for="review-provider">Provider</label>
                         <select class="form-control" id="review-provider" name="provider" v-model="review.provider">
                             <option v-bind:value="null"></option>
-                            <option v-bind:value="review.provider && personOption.id === review.provider.id ? review.provider : personOption" v-for="personOption in people" :key="personOption.id">{{personOption.person}}</option>
+                            <option v-bind:value="review.provider && providerProfessionOption.id === review.provider.id ? review.provider : providerProfessionOption" v-for="providerProfessionOption in providerProfessions" :key="providerProfessionOption.id">{{providerProfessionOption.person}}</option>
                         </select>
                     </div>
                 </div>

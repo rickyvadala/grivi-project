@@ -56,12 +56,6 @@
       "relationshipName": "asClientReviews"
     },
     {
-      "relationshipType": "one-to-many",
-      "otherEntityName": "review",
-      "otherEntityRelationshipName": "provider",
-      "relationshipName": "asProviderReviews"
-    },
-    {
       "relationshipType": "many-to-many",
       "otherEntityName": "company",
       "otherEntityRelationshipName": "person",

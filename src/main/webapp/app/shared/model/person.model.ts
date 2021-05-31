@@ -19,7 +19,6 @@ export interface IPerson {
   providerProfessions?: IProviderProfession[];
   reactions?: IReaction[];
   asClientReviews?: IReview[];
-  asProviderReviews?: IReview[];
   companies?: ICompany[];
   locations?: ILocation[];
   channels?: IChannel[];
@@ -38,7 +37,6 @@ export class Person implements IPerson {
     public providerProfessions?: IProviderProfession[],
     public reactions?: IReaction[],
     public asClientReviews?: IReview[],
-    public asProviderReviews?: IReview[],
     public companies?: ICompany[],
     public locations?: ILocation[],
     public channels?: IChannel[]

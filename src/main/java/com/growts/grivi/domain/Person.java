@@ -52,9 +52,6 @@ public class Person implements Serializable {
     @OneToMany(mappedBy = "client")
     private Set<Review> asClientReviews = new HashSet<>();
 
-    @OneToMany(mappedBy = "provider")
-    private Set<Review> asProviderReviews = new HashSet<>();
-
     @ManyToMany
     @JoinTable(name = "person_company",
                joinColumns = @JoinColumn(name = "person_id", referencedColumnName = "id"),
@@ -280,31 +277,6 @@ public class Person implements Serializable {
 
     public void setAsClientReviews(Set<Review> reviews) {
         this.asClientReviews = reviews;
-    }
-
-    public Set<Review> getAsProviderReviews() {
-        return asProviderReviews;
-    }
-
-    public Person asProviderReviews(Set<Review> reviews) {
-        this.asProviderReviews = reviews;
-        return this;
-    }
-
-    public Person addAsProviderReviews(Review review) {
-        this.asProviderReviews.add(review);
-        review.setProvider(this);
-        return this;
-    }
-
-    public Person removeAsProviderReviews(Review review) {
-        this.asProviderReviews.remove(review);
-        review.setProvider(null);
-        return this;
-    }
-
-    public void setAsProviderReviews(Set<Review> reviews) {
-        this.asProviderReviews = reviews;
     }
 
     public Set<Company> getCompanies() {

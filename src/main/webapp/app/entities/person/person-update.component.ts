@@ -196,11 +196,6 @@ export default class PersonUpdate extends Vue {
       .then(res => {
         this.reviews = res.data;
       });
-    this.reviewService()
-      .retrieve()
-      .then(res => {
-        this.reviews = res.data;
-      });
     this.companyService()
       .retrieve()
       .then(res => {

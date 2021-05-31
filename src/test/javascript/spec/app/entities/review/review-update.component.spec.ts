@@ -19,6 +19,8 @@ import ReviewDetService from '@/entities/review-det/review-det.service';
 
 import PersonService from '@/entities/person/person.service';
 
+import ProviderProfessionService from '@/entities/provider-profession/provider-profession.service';
+
 const localVue = createLocalVue();
 
 config.initVueApp(localVue);
@@ -51,6 +53,8 @@ describe('Component Tests', () => {
           reviewDetService: () => new ReviewDetService(),
 
           personService: () => new PersonService(),
+
+          providerProfessionService: () => new ProviderProfessionService(),
         },
       });
       comp = wrapper.vm;

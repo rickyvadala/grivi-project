@@ -24,6 +24,9 @@ public class ProviderProfession implements Serializable {
     @OneToMany(mappedBy = "providerProfession")
     private Set<ReviewQuestion> reviewQuestions = new HashSet<>();
 
+    @OneToMany(mappedBy = "provider")
+    private Set<Review> reviews = new HashSet<>();
+
     @ManyToOne
     @JsonIgnoreProperties(value = "providerProfessions", allowSetters = true)
     private Person person;
@@ -64,6 +67,31 @@ public class ProviderProfession implements Serializable {
 
     public void setReviewQuestions(Set<ReviewQuestion> reviewQuestions) {
         this.reviewQuestions = reviewQuestions;
+    }
+
+    public Set<Review> getReviews() {
+        return reviews;
+    }
+
+    public ProviderProfession reviews(Set<Review> reviews) {
+        this.reviews = reviews;
+        return this;
+    }
+
+    public ProviderProfession addReview(Review review) {
+        this.reviews.add(review);
+        review.setProvider(this);
+        return this;
+    }
+
+    public ProviderProfession removeReview(Review review) {
+        this.reviews.remove(review);
+        review.setProvider(null);
+        return this;
+    }
+
+    public void setReviews(Set<Review> reviews) {
+        this.reviews = reviews;
     }
 
     public Person getPerson() {

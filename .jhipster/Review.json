@@ -32,8 +32,8 @@
     },
     {
       "relationshipType": "many-to-one",
-      "otherEntityName": "person",
-      "otherEntityRelationshipName": "asProviderReviews",
+      "otherEntityName": "providerProfession",
+      "otherEntityRelationshipName": "review",
       "relationshipName": "provider",
       "otherEntityField": "person"
     }

@@ -18,7 +18,7 @@
                                  baseTableName="review"
                                  constraintName="fk_review_provider_id"
                                  referencedColumnNames="id"
-                                 referencedTableName="person"/>
+                                 referencedTableName="provider_profession"/>
 
     </changeSet>
 </databaseChangeLog>
